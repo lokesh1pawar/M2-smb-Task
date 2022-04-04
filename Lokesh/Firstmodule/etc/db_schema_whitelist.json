@@ -1,0 +1,37 @@
+{
+    "lokesh_tbl": {
+        "column": {
+            "id": true,
+            "title": true,
+            "content": true,
+            "created_at": true,
+            "mycolumn": true
+        },
+        "constraint": {
+            "PRIMARY": true
+        }
+    },
+    "krish_tbl": {
+        "column": {
+            "id": true,
+            "name": true,
+            "contact": true,
+            "created_at": true
+        },
+        "constraint": {
+            "PRIMARY": true
+        }
+    },
+    "super_tbl": {
+        "column": {
+            "id": true,
+            "username": true,
+            "password": true,
+            "address": true,
+            "created_at": true
+        },
+        "constraint": {
+            "PRIMARY": true
+        }
+    }
+}

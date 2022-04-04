@@ -1,0 +1,62 @@
+<!-- <h1>This Is Lokesh Blog</h1> -->
+
+<?php /** @var Thecoachsmb\Mymodule\Block\Art $block */ ?>
+<!-- <?php  $collection = $block->getCollection();?>
+<?php if (count($collection)) { ?>
+<h2><?= $block->escapeHtml(__('Blog Table')) ?></h2>
+<?php foreach($block->getCollection() as $post): ?>
+
+<h3><?= $block->escapeHtml(__('Sno. - ')) ?>
+<p><?php echo $post->getId(); ?></p>
+<h3><?= $block->escapeHtml(__('Title - ')) ?>
+<a href="<?php echo $block->getArticleUrl($post->getId());?>"><?php echo $post->getTitle(); ?></a>
+</h3>
+<h3><?= $block->escapeHtml(__('Description - ')) ?>
+<p><?php echo $post->getDescription(); ?></p></h3>
+<?php endforeach; ?>
+<?php } ?> -->
+
+
+
+<?php
+	$collection = $block->getCollection();
+if (count($collection)) {
+?>
+<h2 style="font-style:bold;">Blog Records</h2>
+
+<div class="table-wrapper orders-history">
+    <table class="data table table-order-items history" id="my-orders-table">
+        <caption class="table-caption"><?php echo __('Blog Record') ?></caption>
+        <thead>
+        <tr>
+            <th scope="col" class="col id"><?php echo __('S.No') ?></th>
+            <th scope="col" class="col title"><?php echo __('Title') ?></th>
+            <th scope="col" class="col description"><?php echo __('Description') ?></th>
+            <th scope="col" class="col status"><?php echo __('Status') ?></th>
+        </tr>
+        </thead>
+        <tbody>
+        <?php
+				foreach ($collection as $item): ?>
+        <tr>
+            <td data-th="<?= $block->escapeHtml(__('ID')) ?>" class="col id">
+                <?php echo $item->getId() ?>
+            </td>
+            <td data-th="<?= $block->escapeHtml(__('Title')) ?>" class="col title">
+                <!-- <?php echo $item->getTitle() ?> -->
+                <a href="<?php echo $block->getArticleUrl($post->getId());?>"><?php echo $item->getTitle(); ?></a>
+            </td>
+            <td data-th="<?= $block->escapeHtml(__('Description')) ?>" class="col description">
+                <?php echo $item->getDescription() ?>
+            </td>
+            <td data-th="<?= $block->escapeHtml(__('Status')) ?>" class="col status">
+                <?php echo $item->getStatus() ?>
+            </td>
+        </tr>
+        <?php endforeach; ?>
+        </tbody>
+    </table>
+</div>
+<?php
+	}
+	?>

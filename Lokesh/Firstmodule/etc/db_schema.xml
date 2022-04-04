@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Setup/Declaration/Schema/etc/schema.xsd">
+
+    <!-- Table:- lokesh_tbl  -->
+
+   <table name="lokesh_tbl" resource="default" engine="innodb" comment="lokesh_tbl is the table name">
+      <column xsi:type="int" name="id" unsigned="true" identity="true" nullable="false" comment="Id"/>
+      <column xsi:type="varchar" name="title" nullable="false" length="255" comment="Title" />
+    <!-- <column xsi:type="varchar" name="mycolumn" nullable="false" length="255" comment="Mycolumn" onCreate="migrateDataFrom(content)" /> -->
+      <column xsi:type="varchar" name="content" nullable="false" length="255" comment="Content" />
+       <column xsi:type="timestamp" name="created_at" on_update="false" nullable="false" default="CURRENT_TIMESTAMP" comment="Created At"/>  
+      <constraint xsi:type="primary" referenceId="PRIMARY">
+         <column name="id" />
+      </constraint>
+   </table>
+
+    <!-- Table:- smb_tbl  -->
+
+
+   <!-- <table name="smb_tbl" resource="default" engine="innodb" comment="smb_tbl is the table name"> -->
+   <!-- <table name="krish_tbl" resource="default" engine="innodb" comment="krish_tbl is the table name" onCreate="migrateDataFromAnotherTable(smb_tbl)">
+      <column xsi:type="int" name="id" unsigned="true" nullable="false" comment="Id"/>
+      <column xsi:type="varchar" name="name" nullable="false" length="255" comment="Name" />
+      <column xsi:type="int" name="contact" nullable="false" comment="Contact" />
+      <column xsi:type="timestamp" name="created_at" comment="Created At"/>
+      <constraint xsi:type="primary" referenceId="PRIMARY">
+         <column name="id" />
+      </constraint>
+   </table> -->
+
+    <!-- Table:- super_tbl  -->
+
+   <!-- <table name="super_tbl" resource="default" engine="innodb" comment="super_tbl is the table name">
+      <column xsi:type="int" name="id" unsigned="true" nullable="false" comment="Id"/>
+      <column xsi:type="varchar" name="username" nullable="false" length="255" comment="Username" />
+      <column xsi:type="varchar" name="password" nullable="false" length="255" comment="Password" />
+      <column xsi:type="text" name="address" nullable="false" comment="Address" />
+      <column xsi:type="timestamp" name="created_at" comment="Created At"/>
+      <constraint xsi:type="primary" referenceId="PRIMARY">
+         <column name="id" />
+      </constraint>
+   </table> -->
+</schema>

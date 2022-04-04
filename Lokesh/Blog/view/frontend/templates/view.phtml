@@ -1,0 +1,61 @@
+
+<!-- <div class="lokesh-blog">
+	<?php $news = $block->getDataId() ?>
+	<div class="loki-id"><?php echo $news->getId() ?></div>
+	<div class="loki-title"><?php echo $news->getTitle() ?></div>
+	<div class="loki-desc"><?php echo $news->getDescription() ?></div>
+	<div class="loki-status"><?php echo $news->getStatus() ?></div>
+</div> -->
+
+<?php
+	$news = $block->getDataId();
+?>
+<h2>Single Record of Blog</h2>
+<div class="table-wrapper orders-history">
+    <table class="data table table-order-items history" id="my-orders-table">
+        <caption class="table-caption"><?php echo __('Single Blog Record') ?></caption>
+		<thead>
+        <tr>
+            <th scope="col" class="col id"><?php echo __('S.No') ?></th>
+            <th scope="col" class="col title"><?php echo __('Title') ?></th>
+            <th scope="col" class="col description"><?php echo __('Description') ?></th>
+            <th scope="col" class="col status"><?php echo __('Status') ?></th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td data-th="<?= $block->escapeHtml(__('ID')) ?>" class="col id">
+                <?php echo $news->getId() ?>
+            </td>
+            <td data-th="<?= $block->escapeHtml(__('Title')) ?>" class="col title">
+                <?php echo $news->getTitle() ?>
+            </td>
+            <td data-th="<?= $block->escapeHtml(__('Description')) ?>" class="col description">
+                <?php echo $news->getDescription() ?>
+            </td>
+            <td data-th="<?= $block->escapeHtml(__('Status')) ?>" class="col status">
+                <?php echo $news->getStatus() ?>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+<?php
+	
+?>
+<?php
+$new = $block->getcustomData(); ?>
+<?php echo $new; ?>
+
+<h1>
+This is blog2 view
+</h1>
+<?php $cardet = $block->getCars(); 
+
+print_r($cardet);
+?>
+
+
+
+
+
